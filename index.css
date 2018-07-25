@@ -1,0 +1,108 @@
+
+textarea, input, button { outline: none; }
+
+.main {
+  width: 33%;
+  margin-left: 33%;
+  margin-top: 100px;
+  text-align: center;
+  border: 1px solid lightgrey;
+  height: 500px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-form input {
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.email,
+.password,
+.text {
+  border: 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+::placeholder {
+  color: lightgrey;
+}
+
+.email:focus,
+.password:focus,
+.text:focus {
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 10px 20px -10px orange;
+  transition: 0.8s;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 0;
+  background-color: orange;
+  height: 1px;
+  transition: 0.5s;
+  margin-left: 50%;
+}
+
+.email:focus ~ .underline,
+.password:focus ~ .underline,
+.text:focus ~ .underline {
+  width: 100%;
+  background-color: orange;
+  height: 1px;
+  margin-left: 0;
+  box-shadow: 0 10px 20px -10px orange;
+  transition: 0.3s;
+}
+
+.main-form .submit {
+  position: relative;
+  margin-top: 40px;
+  width: 80%;
+  height: 40px;
+  /* background-color: orange; */
+  border: 1px solid orange;
+  color: orange;
+}
+
+.main-form .submit:focus {
+  box-shadow: 0 10px 20px -10px orange;
+}
+
+.submit h3 {
+  position: relative;
+  bottom: 5px;
+}
+
+.orange {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  width: 100%;
+  height: 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.submit:focus .orange, .submit:hover .orange {
+  height: 100%;
+  transition: 0.5s;
+}
+
+.submit:focus h3, .submit:hover h3 {
+  color: white;
+  z-index: 2;
+  transition: 0.5s;
+}
